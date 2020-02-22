@@ -29,8 +29,7 @@
     <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
 </head>
 
 <body>
@@ -74,37 +73,243 @@
     </div>
 </nav>
 
-<div class="container">
-    <form class="my-4 form-style" id="filmForm">
-        <div class="form-group">
-            <label for="films-name" class="text_white">Nom du film</label>
-            <input type="text" class="form-control" id="films-name">
-        </div>
-        <div class="form-group">
-            <label for="genre_film" class="text_white">genre </label>
-            <select class="form-control" id="genre_film">
-                <option>animate</option>
-                <option>action</option>
-                <option>romance</option>
-                <option>music</option>
-                <option>aventure</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="synopsis-film" class="text_white">synopsis</label>
-            <textarea class="form-control" id="synopsis-film" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn-warning text_white mx-auto px-4">ajouter</button>
-    </form>
+<div class="container" >
+<h1 class="text_white text-center text-uppercase my-4" id="romance">romance</h1>
 
-    <div class="row my-4">
+    <div class="block-films row p-3">
+        <div class="block__film col-md-3 col-sm-4 col-12 ">
+        <img src="res/film1.png" alt="logo" class="img-fluid"/>
+        <div class="card-body">
+            <h5 class="card-title">Card with stretched link</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                the
+                card's content.</p>
+            <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+        </div>
+    </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film2.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film3.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film4.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
 
-                <div id="filmAjout" class="text_white">
-                </div>
+
+    </div>
+
+
+    <h1 class="text_white text-center text-uppercase my-4" id="Action">Action</h1>
+
+    <div class="block-films row  p-3">
+        <div class="block__film col-md-3 col-sm-4 col-12 ">
+            <img src="res/film5.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film6.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film7.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film8.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <h1 class="text_white text-center text-uppercase my-4" id="dramatique">Co-dramatique</h1>
+
+    <div class="block-films row  p-3">
+        <div class="block__film col-md-3 col-sm-4 col-12 ">
+            <img src="res/film1.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film2.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film3.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film4.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+
+
+    </div>
+    <h1 class="text_white text-center text-uppercase my-4" id="Animation">Animation</h1>
+
+    <div class="block-films row  p-3">
+        <div class="block__film col-md-3 col-sm-4 col-12 ">
+            <img src="res/film5.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film6.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film7.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film8.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+
+
+    </div>
+    <h1 class="text_white text-center text-uppercase my-4" id="Aventure">Aventure</h1>
+
+    <div class="block-films row  p-3">
+        <div class="block__film col-md-3 col-sm-4 col-12 ">
+            <img src="res/film1.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film2.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film3.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+        <div class="block__film col-md-3 col-sm-4 col-12">
+            <img src="res/film4.png" alt="logo" class="img-fluid"/>
+            <div class="card-body">
+                <h5 class="card-title">Card with stretched link</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                    the
+                    card's content.</p>
+                <a href="#" class="btn btn-warning text_white stretched-link">Go somewhere</a>
+            </div>
+        </div>
+
 
     </div>
 </div>
-<footer id="footer" class="footer-1">
+
+<footer id="footer" class="footer-1 mt-4">
     <div class="main-footer widgets-dark typo-light">
         <div class="container">
             <div class="row">
@@ -196,7 +401,9 @@
         </div>
     </div>
 </footer>
-<script src="js/main.js"></script>
+
+
 </body>
+<script type="text/javascript" src="js/main.js"></script>
 
 </html>
