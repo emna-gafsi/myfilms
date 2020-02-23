@@ -1,10 +1,10 @@
 var image = document.getElementsByClassName("thumbnail");
 new simpleParallax(image, {
-  scale: 1.5
+    scale: 1.5
 });
 var image = document.getElementsByClassName("thumbnail-2");
 new simpleParallax(image, {
-  scale: 1.5
+    scale: 1.5
 });
 
 // Your web app's Firebase configuration
@@ -28,30 +28,37 @@ document.getElementById("filmForm").addEventListener("submit", (e) => {
     var name = document.getElementById("films-name").value;
     var synopsis = document.getElementById("synopsis-film").value;
     var genre = document.getElementById("genre_film").value;
+    var image = document.getElementById("image-film-url").value;
     e.preventDefault();
-    ajoutfilm(name, synopsis ,genre);
+    ajoutfilm(name, synopsis, genre, image);
     window.alert('Submission Done!');
     getdata();
 
 });
 var filmRef = database.ref('/films');
 
-function ajoutfilm(namefilm, synopsis ,genre) {
+function ajoutfilm(namefilm, synopsis, genre, image) {
     var newfimlRef = filmRef.push();
     newfimlRef.set({
         name: namefilm,
         synopsis: synopsis,
-        genre: genre
+        genre: genre,
+        image: image
     })
 }
+
 function getdata() {
-    filmRef.once("value", function(snapshot) {
-        snapshot.forEach(function(childSnapshot) {
+    filmRef.once("value", function (snapshot) {
+        snapshot.forEach(function (childSnapshot) {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
             document.getElementById("filmAjout").innerHTML =
-                childData["name"] + "," + childData["synopsis"] + "," +childData["genre"] ;
+                '<div class="ajout__film col-12 col-sm-4 col-md-3 pt-2">' +
+                '<img src="' + childData["image"] + '" height="312" width="230">' +
+                '<h3 class="film-title">' + childData["name"] + '</h3>' +
+                '<p class="genre-film">' + childData["genre"] + '</p>' +
+                '<div class="film-desc"> <p>' + childData["synopsis"] + '</p> </div>' + ' <a href="#" class="btn btn-warning text_white stretched-link text-center my-2">Go somewhere</a>' + '</div>';
+
         });
     });
 }
-
