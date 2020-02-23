@@ -24,17 +24,19 @@ firebase.analytics();
 //Listening on the form
 var database = firebase.database();
 var i = 1;
-document.getElementById("filmForm").addEventListener("submit", (e) => {
-    var name = document.getElementById("films-name").value;
-    var synopsis = document.getElementById("synopsis-film").value;
-    var genre = document.getElementById("genre_film").value;
-    var image = document.getElementById("image-film-url").value;
-    e.preventDefault();
-    ajoutfilm(name, synopsis, genre, image);
-    window.alert('Submission Done!');
-    getdata();
+if (document.getElementById("filmForm") != null) {
+    document.getElementById("filmForm").addEventListener("submit", (e) => {
+        var name = document.getElementById("films-name").value;
+        var synopsis = document.getElementById("synopsis-film").value;
+        var genre = document.getElementById("genre_film").value;
+        var image = document.getElementById("image-film-url").value;
+        e.preventDefault();
+        ajoutfilm(name, synopsis, genre, image);
+        window.alert('Submission Done!');
+        getdata();
 
-});
+    });
+}
 var filmRef = database.ref('/films');
 
 function ajoutfilm(namefilm, synopsis, genre, image) {
@@ -52,9 +54,9 @@ function getdata() {
         snapshot.forEach(function (childSnapshot) {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
-            document.getElementById("filmAjout").innerHTML =
-                '<div class="ajout__film col-12 col-sm-4 col-md-3 pt-2">' +
-                '<img src="' + childData["image"] + '" height="312" width="230">' +
+            document.getElementById("filmAjout").innerHTML +=
+                '<div class="ajout__film col-12 col-sm-4 col-md-3 pt-2 m-2">' +
+                '<img src="' + childData["image"] + '" height="312" width="230" class="img-fluid">' +
                 '<h3 class="film-title">' + childData["name"] + '</h3>' +
                 '<p class="genre-film">' + childData["genre"] + '</p>' +
                 '<div class="film-desc"> <p>' + childData["synopsis"] + '</p> </div>' + ' <a href="#" class="btn btn-warning text_white stretched-link text-center my-2">Go somewhere</a>' + '</div>';

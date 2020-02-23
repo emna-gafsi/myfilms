@@ -282,4 +282,11 @@ a:hover {
 
 .ajout__film {
     border: 1px solid #e68000;
+    text-align: center;
+}
+
+div#filmAjout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
 }
